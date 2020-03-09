@@ -1,4 +1,20 @@
 const inquirer = require('inquirer');
+const { exec } = require('child_process');
+
+const handleError = (error) => {
+    console.error('Error', error);
+}
+
+const runCommand = (message) => {
+    exec(`git commit -m ${message}`, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`exec error: ${error}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
+    })
+}
 
 (async () => {
     const questions = [
@@ -17,18 +33,12 @@ const inquirer = require('inquirer');
             name: 'message',
             message: 'What\'s the message of this commit',
             default: 'Commit message'
-        },
+        }
     ]
 
     const answers = await inquirer
         .prompt(questions)
-        .catch(error => {
-            if (error.isTtyError) {
-                // Prompt couldn't be rendered in the current environment
-            } else {
-                console.error('Error:', error);
-            }
-        });
+        .catch(handleError);
 
     const message = `"${answers.type}:(${answers.scope}) ${answers.message}"`;
 
@@ -41,9 +51,11 @@ const inquirer = require('inquirer');
         },
     ])
 
-    if(answersResult.runCommand) {
-        console.info(`Runnig git commit -m `)
+    if (answersResult.runCommand) {
+        console.info(`Runnig git commit command...`)
+        runCommand(message);
     } else {
+        console.info('Here is your commit message:');
         console.info(`git commit -m ${message}`)
     }
 })();
