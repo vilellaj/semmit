@@ -48,7 +48,7 @@ const runCommand = (message) => {
             name: 'runCommand',
             message: `This is your message: ${message}. Do you want to run git commit command?`,
             default: true
-        },
+        }
     ])
 
     if (answersResult.runCommand) {
