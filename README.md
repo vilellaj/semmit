@@ -12,14 +12,13 @@ npm i -g semmit
 
 Work normally in your git project, add your files to stage with
 
-´´´git add .´´´
+```git add .```
 
 and run
 
-´´´semmit´´´
+```semmit```
 
-A prompt with directions will be presented
-
+A prompt with directions will be presented.
 
 ## Reference
 
