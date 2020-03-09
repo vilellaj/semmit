@@ -1,5 +1,7 @@
 # Semmit
 
+[![CircleCI](https://circleci.com/gh/vilellaj/semmit.svg?style=svg)](https://circleci.com/gh/vilellaj/semmit)
+
 ## Description
 
 A tool that generates semantic commit messages
