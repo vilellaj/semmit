@@ -1,6 +1,6 @@
 {
   "name": "semmit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate semantic commits",
   "main": "index.js",
   "scripts": {
