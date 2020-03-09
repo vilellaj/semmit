@@ -1,0 +1,28 @@
+{
+  "name": "semmit",
+  "version": "0.0.1",
+  "description": "Generate semantic commits",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vilellaj/semmit.git"
+  },
+  "keywords": [
+    "node",
+    "cli",
+    "semantic",
+    "commits"
+  ],
+  "author": "Jonathan Vilella",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vilellaj/semmit/issues"
+  },
+  "homepage": "https://github.com/vilellaj/semmit#readme",
+  "dependencies": {
+    "inquirer": "^7.0.6"
+  }
+}
