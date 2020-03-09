@@ -6,7 +6,7 @@ A tool that generates semantic commit messages
 
 ## Installation
 
-npm i -g semmit
+```npm i -g semmit```
 
 ## Usage
 
