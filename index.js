@@ -11,8 +11,8 @@ const runCommand = (message) => {
             console.error(`exec error: ${error}`);
             return;
         }
-        console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
+        console.info(`${stdout}`);
+        console.error(`${stderr}`);
     })
 }
 
