@@ -6,6 +6,8 @@
 
 A tool that generates semantic commit messages
 
+![Semmit Usage](https://github.com/vilellaj/semmit/blob/master/semmit.gif)
+
 ## Installation
 
 ```npm i -g semmit```
